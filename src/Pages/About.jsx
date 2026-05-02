@@ -296,7 +296,7 @@ const AboutPage = () => {
         }
 
       {/* ── Academic Background ── */}
-      <div className="w-full max-w-4xl mx-auto px-4 mt-20" data-aos="fade-up">
+      <div id="Education" className="w-full max-w-4xl mx-auto px-4 mt-20" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-center text-white mb-10">
           Academic <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">Background</span>
         </h2>
