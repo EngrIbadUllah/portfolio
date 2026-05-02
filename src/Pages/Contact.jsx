@@ -130,7 +130,7 @@ const ContactPage = () => {
             <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-indigo-500/30 transition-all duration-300">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-9 h-9 rounded-lg bg-green-500/20 flex items-center justify-center">
-                  <span className="text-2xl">💼  </span>
+                  <span className="text-2xl">🎓</span>
                 </div>
                 <span className="text-gray-400 text-sm font-medium">Education</span>
               </div>
@@ -140,7 +140,7 @@ const ContactPage = () => {
             <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-indigo-500/30 transition-all duration-300">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-9 h-9 rounded-lg bg-blue-500/20 flex items-center justify-center">
-                  <span className="text-blue-400 text-sm">🎓</span>
+                  <span className="text-blue-400 text-sm">🚀</span>
                 </div>
                 <span className="text-gray-400 text-sm font-medium">Status</span>
               </div>
