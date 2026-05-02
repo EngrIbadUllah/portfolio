@@ -132,25 +132,11 @@ export default function FullWidthTabs() {
       return;
     }
 
-    setProjects(data);
+    setProjects(data || []);
   };
 
   fetchProjects();
 }, []);
-
-      // Error handling for each request
-      if (projectsResponse.error) throw projectsResponse.error;
-      if (certificatesResponse.error) throw certificatesResponse.error;
-
-      // Supabase mengembalikan data dalam properti 'data'
-      const projectData = projectsResponse.data || [];
-      const certificateData = certificatesResponse.data || [];
-console.log("Projects:", projectData);
-      setProjects(projectData);
-      setCertificates(certificateData);
-
-  
-  }, []);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
