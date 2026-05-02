@@ -108,9 +108,9 @@ const [instagram, github, whatsapp] = otherLinks;
         </a>
 
         {/* Second Row - Instagram & GitHub */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-{[instagram, github].map((link, index) => (
-              <a
+className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+{[instagram, github, whatsapp].map((link, index) => (
+                <a
               key={link.name}
               href={link.url}
               target="_blank"

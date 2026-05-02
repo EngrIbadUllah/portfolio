@@ -336,8 +336,8 @@ Currently focused on improving my frontend development skills and working on rea
 
   <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl hover:border-indigo-500/30 transition-all duration-300">
     <p className="text-gray-300 text-sm leading-relaxed text-center">
-      I am currently learning React.js and building real-world projects to strengthen my frontend development skills. 
-      My focus is on creating clean, responsive, and user-friendly web applications while improving problem-solving abilities.
+      I am currently learning HTML,CSS,React.js and do practice on building real world projects to strengthen my frontend development skills. 
+      My focus is on creating clean, responsive, and user friendly web applications while improving problem solving abilities.
     </p>
   </div>
 </div>
