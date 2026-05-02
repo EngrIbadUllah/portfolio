@@ -294,6 +294,8 @@ const AboutPage = () => {
         .animate-spin-slower {
           animation: spin-slower 8s linear infinite;
         }
+      `}</style>
+    </div>
 
       {/* ── Academic Background ── */}
       <div id="Education" className="w-full max-w-4xl mx-auto px-4 mt-20" data-aos="fade-up">
@@ -317,9 +319,12 @@ const AboutPage = () => {
                 <span className="flex items-center gap-1 text-sm text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/10">
                   🎓 1st Year
                 </span>
+                <span className="flex items-center gap-1 text-sm text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/10">
+                  📍 Islamabad, Pakistan
+                </span>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Currently pursuing a Bachelor of Science in Software Engineering, building a strong foundation in programming, data structures, algorithms, and modern software development practices.
+                Currently pursuing a Bachelor of Science in Software Engineering at Air University, Islamabad. Building a strong foundation in programming, data structures, algorithms, and modern software development practices.
               </p>
             </div>
           </div>
@@ -327,13 +332,11 @@ const AboutPage = () => {
       </div>
 
       {/* ── Professional Journey ── */}
-      <div className="w-full max-w-4xl mx-auto px-4 mt-16 mb-10" data-aos="fade-up">
+      <div className="w-full max-w-4xl mx-auto px-4 mt-16 mb-16" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-center text-white mb-10">
           Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">Journey</span>
         </h2>
         <div className="relative border-l-2 border-indigo-500/30 pl-8 space-y-10">
-
-          {/* Entry 1 */}
           <div className="relative" data-aos="fade-up" data-aos-delay="100">
             <div className="absolute -left-[2.65rem] top-1 w-4 h-4 rounded-full bg-indigo-500 border-2 border-indigo-300 shadow-lg shadow-indigo-500/50"></div>
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-indigo-500/30 transition-all duration-300">
@@ -343,25 +346,24 @@ const AboutPage = () => {
                   <p className="text-indigo-400 font-medium text-sm mt-1">Self-Study & Personal Projects</p>
                 </div>
                 <div className="flex gap-2 flex-wrap">
-                  <span className="text-xs text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full">📅 Present</span>
-                  <span className="text-xs text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full">💻 Remote</span>
+                  <span className="text-xs text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full">📅 2025 – Present</span>
+                  <span className="text-xs text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full">💻 Self-Directed</span>
                 </div>
               </div>
               <ul className="mt-3 space-y-2 text-sm text-gray-400">
                 <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Building personal web projects using HTML, CSS, and C++</li>
-                <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Studying modern web development technologies and frameworks</li>
-                <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Developing problem-solving skills through coding practice</li>
+                <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Studying modern web development technologies and best practices</li>
+                <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Developing problem-solving skills through consistent coding practice</li>
+                <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Actively seeking internship and collaboration opportunities</li>
               </ul>
             </div>
           </div>
-
         </div>
-        <p className="text-center text-gray-600 text-xs mt-8">More experience coming soon — stay tuned! 🚀</p>
+        <p className="text-center text-gray-500 text-xs mt-8">More experience coming soon — stay tuned! 🚀</p>
       </div>
 
-      `}</style>
-    </div>
+
   );
 };
 
-export default memo(AboutPage);
+export default AboutPage;
