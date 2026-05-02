@@ -90,17 +90,7 @@ const Home = () => {
   }, []);
 
     useEffect(() => {
-  const initAOS = () => {
-    AOS.init({ once: false });
-  };
-
-  initAOS();
-
-  window.addEventListener("resize", initAOS);
-
-  return () => {
-    window.removeEventListener("resize", initAOS);
-  };
+  AOS.init({ once: false });
 }, []);
 
   useEffect(() => {
