@@ -328,7 +328,19 @@ Currently focused on improving my frontend development skills and working on rea
           </div>
         </div>
       </div>
+{/* Currently Working On */}
+<div className="w-full max-w-4xl mx-auto px-4 mt-16" data-aos="fade-up">
+  <h2 className="text-3xl font-bold text-center text-white mb-8">
+    Currently <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">Working On</span>
+  </h2>
 
+  <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl hover:border-indigo-500/30 transition-all duration-300">
+    <p className="text-gray-300 text-sm leading-relaxed text-center">
+      I am currently learning React.js and building real-world projects to strengthen my frontend development skills. 
+      My focus is on creating clean, responsive, and user-friendly web applications while improving problem-solving abilities.
+    </p>
+  </div>
+</div>
       {/* Professional Journey */}
       <div className="w-full max-w-4xl mx-auto px-4 mt-16 mb-16" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-center text-white mb-10">
