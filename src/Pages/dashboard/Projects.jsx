@@ -94,7 +94,7 @@ const ProjectCard = ({ project, onDelete, onEdit }) => {
           {project.Title}
         </h3>
         {project.Description && (
-          <p className="text-gray-400 text-xs mb-3 line-clamp-2 leading-relaxed">
+          <p className="text-gray-300 text-xs mb-3 line-clamp-2 leading-relaxed">
             {project.Description}
           </p>
         )}
@@ -309,7 +309,7 @@ const ProjectForm = ({
         <button
           type="button"
           onClick={onCancel}
-          className="px-4 py-2 rounded-xl border border-white/10 text-gray-400 hover:text-white text-sm transition-colors"
+          className="px-4 py-2 rounded-xl border border-white/10 text-gray-300 hover:text-white text-sm transition-colors"
         >
           Cancel
         </button>

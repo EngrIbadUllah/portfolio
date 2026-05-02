@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Linkedin, Github, Instagram, ExternalLink } from "lucide-react";
+import { Linkedin, Github, Instagram, ExternalLink, MessageCircle } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import PresenceWidget from "./PresenceWidget";
@@ -33,13 +33,21 @@ const socialLinks = [
     color: "#ffffff",
     gradient: "from-[#333] to-[#24292e]",
   },
+  {
+  name: "WhatsApp",
+  displayName: "WhatsApp",
+  subText: "Chat with me",
+  icon: MessageCircle,
+  url: "https://wa.me/923158896730",
+  color: "#25D366",
+  gradient: "from-[#25D366] to-[#128C7E]",
+},
 ];
 
 const SocialLinks = () => {
   const linkedIn = socialLinks.find((link) => link.isPrimary);
   const otherLinks = socialLinks.filter((link) => !link.isPrimary);
-  const [instagram, github] = otherLinks;
-
+const [instagram, github, whatsapp] = otherLinks;
   useEffect(() => {
     AOS.init({ offset: 10 });
   }, []);
@@ -88,7 +96,7 @@ const SocialLinks = () => {
               <span className="text-lg font-bold pt-[0.2rem] text-gray-200 tracking-tight leading-none group-hover:text-white transition-colors duration-300">
                 {linkedIn.displayName}
               </span>
-              <span className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+              <span className="text-sm text-gray-300 group-hover:text-gray-300 transition-colors duration-300">
                 {linkedIn.subText}
               </span>
             </div>
@@ -101,8 +109,8 @@ const SocialLinks = () => {
 
         {/* Second Row - Instagram & GitHub */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {[instagram, github].map((link, index) => (
-            <a
+{[instagram, github].map((link, index) => (
+              <a
               key={link.name}
               href={link.url}
               target="_blank"
@@ -134,7 +142,7 @@ const SocialLinks = () => {
                 <span className="text-sm font-bold text-gray-200 group-hover:text-white transition-colors duration-300">
                   {link.displayName}
                 </span>
-                <span className="text-xs text-gray-400 truncate group-hover:text-gray-300 transition-colors duration-300">
+                <span className="text-xs text-gray-300 truncate group-hover:text-gray-300 transition-colors duration-300">
                   {link.subText}
                 </span>
               </div>

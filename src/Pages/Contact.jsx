@@ -70,26 +70,26 @@ const ContactPage = () => {
               <h2 className="text-3xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
                 Contact
               </h2>
-              <p className="text-gray-400 text-sm">Want to discuss something? Send me a message and let's talk.</p>
+              <p className="text-gray-300 text-sm">Want to discuss something? Send me a message and let's talk.</p>
             </div>
             <Share2 className="w-8 h-8 text-[#6366f1] opacity-50" />
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div data-aos="fade-up" data-aos-delay="100" className="relative group">
-              <User className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors" />
+              <User className="absolute left-4 top-4 w-5 h-5 text-gray-300 group-focus-within:text-[#6366f1] transition-colors" />
               <input type="text" name="name" placeholder="Your Name" value={formData.name}
                 onChange={handleChange} disabled={isSubmitting} required
                 className="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 disabled:opacity-50" />
             </div>
             <div data-aos="fade-up" data-aos-delay="200" className="relative group">
-              <Mail className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors" />
+              <Mail className="absolute left-4 top-4 w-5 h-5 text-gray-300 group-focus-within:text-[#6366f1] transition-colors" />
               <input type="email" name="email" placeholder="Your Email" value={formData.email}
                 onChange={handleChange} disabled={isSubmitting} required
                 className="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 disabled:opacity-50" />
             </div>
             <div data-aos="fade-up" data-aos-delay="300" className="relative group">
-              <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors" />
+              <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-300 group-focus-within:text-[#6366f1] transition-colors" />
               <textarea name="message" placeholder="Your Message" value={formData.message}
                 onChange={handleChange} disabled={isSubmitting} required
                 className="w-full resize-none p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 h-36 disabled:opacity-50" />
@@ -112,7 +112,7 @@ const ContactPage = () => {
                 <div className="w-9 h-9 rounded-lg bg-indigo-500/20 flex items-center justify-center">
                   <Mail className="w-4 h-4 text-indigo-400" />
                 </div>
-                <span className="text-gray-400 text-sm font-medium">Email</span>
+                <span className="text-gray-300 text-sm font-medium">Email</span>
               </div>
               <p className="text-white text-sm font-semibold break-all">ibadullahse@gmail.com</p>
             </div>
@@ -122,7 +122,7 @@ const ContactPage = () => {
                 <div className="w-9 h-9 rounded-lg bg-purple-500/20 flex items-center justify-center">
                   <MapPin className="w-4 h-4 text-purple-400" />
                 </div>
-                <span className="text-gray-400 text-sm font-medium">Location</span>
+                <span className="text-gray-300 text-sm font-medium">Location</span>
               </div>
               <p className="text-white text-sm font-semibold">Islamabad, Pakistan</p>
             </div>
@@ -132,7 +132,7 @@ const ContactPage = () => {
                 <div className="w-9 h-9 rounded-lg bg-green-500/20 flex items-center justify-center">
                   <span className="text-2xl">🎓</span>
                 </div>
-                <span className="text-gray-400 text-sm font-medium">Education</span>
+                <span className="text-gray-300 text-sm font-medium">Education</span>
               </div>
               <p className="text-white text-sm font-semibold">2nd Semester</p>
             </div>
@@ -142,7 +142,7 @@ const ContactPage = () => {
                 <div className="w-9 h-9 rounded-lg bg-blue-500/20 flex items-center justify-center">
                   <span className="text-blue-400 text-sm">🚀</span>
                 </div>
-                <span className="text-gray-400 text-sm font-medium">Status</span>
+                <span className="text-gray-300 text-sm font-medium">Status</span>
               </div>
               <p className="text-white text-sm font-semibold">Open to Opportunities</p>
             </div>

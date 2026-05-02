@@ -141,7 +141,7 @@ export default function Certificates() {
 
           {file && (
             <div className="flex items-center justify-between gap-3 flex-wrap">
-              <p className="text-xs text-gray-400 truncate flex-1">{file.name}</p>
+              <p className="text-xs text-gray-300 truncate flex-1">{file.name}</p>
               <div className="flex gap-2 shrink-0">
                 <button onClick={() => { setFile(null); setPreview(null) }}
                   className="px-3 py-1.5 rounded-xl border border-white/10 text-gray-500 hover:text-white text-xs transition-colors">

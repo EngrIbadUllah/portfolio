@@ -55,12 +55,12 @@ const InputField = ({ field, label, icon: Icon, formData, handleChange }) => {
   return (
     <div className="relative w-full group">
       {/* Icon and Label */}
-      <div className="absolute left-4 top-4 flex items-center space-x-2 text-gray-400 transition-colors group-hover:text-[#6366f1]">
+      <div className="absolute left-4 top-4 flex items-center space-x-2 text-gray-300 transition-colors group-hover:text-[#6366f1]">
         <Icon className="w-5 h-5" />
         <label
           htmlFor={field}
           className={`
-            absolute left-12 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm transition-all duration-300 
+            absolute left-12 top-1/2 transform -translate-y-1/2 text-gray-300 text-sm transition-all duration-300 
             peer-placeholder-shown:top-1/2 peer-placeholder-shown:translate-y-0 
             peer-placeholder-shown:text-gray-500 peer-placeholder-shown:text-base 
             peer-focus:top-2 peer-focus:translate-y-0 peer-focus:text-[#6366f1] peer-focus:text-sm

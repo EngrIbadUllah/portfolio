@@ -51,7 +51,7 @@ const Comment = memo(({ comment, formatDate, index, isPinned = false }) => (
                             </span>
                         )}
                     </div>
-                    <span className="text-xs text-gray-400 whitespace-nowrap">
+                    <span className="text-xs text-gray-300 whitespace-nowrap">
                         {formatDate(comment.created_at)}
                     </span>
                 </div>
@@ -152,7 +152,7 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
 
             <div className="space-y-2" data-aos="fade-up" data-aos-duration="1400">
                 <label className="block text-sm font-medium text-white">
-                    Profile Photo <span className="text-gray-400">(optional)</span>
+                    Profile Photo <span className="text-gray-300">(optional)</span>
                 </label>
                 <div className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl">
                     {imagePreview ? (
@@ -192,7 +192,7 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
                                 <ImagePlus className="w-5 h-5 group-hover:scale-110 transition-transform" />
                                 <span>Choose Profile Photo</span>
                             </button>
-                            <p className="text-center text-gray-400 text-sm mt-2">
+                            <p className="text-center text-gray-300 text-sm mt-2">
                                 Max file size: 5MB
                             </p>
                         </div>
@@ -236,7 +236,7 @@ const Komentar = () => {
         return (
             <div className="flex flex-col items-center justify-center h-full min-h-[300px] text-center p-8">
                 <div className="text-gray-500 text-sm">
-                    <p className="text-gray-400 font-medium mb-2">Comments unavailable</p>
+                    <p className="text-gray-300 font-medium mb-2">Comments unavailable</p>
                     <p className="text-gray-600 text-xs">Connect Supabase to enable the comments section.</p>
                 </div>
             </div>
@@ -435,7 +435,7 @@ const Komentar = () => {
                     {comments.length === 0 && !pinnedComment ? (
                         <div className="text-center py-8" data-aos="fade-in">
                             <UserCircle2 className="w-12 h-12 text-indigo-400 mx-auto mb-3 opacity-50" />
-                            <p className="text-gray-400">No comments yet. Start the conversation!</p>
+                            <p className="text-gray-300">No comments yet. Start the conversation!</p>
                         </div>
                     ) : (
                         comments.map((comment, index) => (

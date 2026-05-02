@@ -57,7 +57,7 @@ export default function Dashboard() {
               className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 text-sm font-medium shrink-0 ${
                 active
                   ? 'bg-gradient-to-r from-indigo-500/20 to-purple-500/15 border border-indigo-500/30 text-white'
-                  : 'text-gray-400 hover:text-gray-200 hover:bg-white/5 border border-transparent'
+                  : 'text-gray-300 hover:text-gray-200 hover:bg-white/5 border border-transparent'
               }`}
             >
               <Icon className={`w-4 h-4 shrink-0 ${active ? 'text-indigo-400' : ''}`} />
@@ -113,7 +113,7 @@ export default function Dashboard() {
         <div className="lg:hidden flex items-center gap-3 px-4 py-3 border-b border-white/8 bg-white/3 backdrop-blur-xl shrink-0">
           <button
             onClick={() => setSidebarOpen(true)}
-            className="p-2 rounded-lg border border-white/10 text-gray-400 hover:text-white transition-colors"
+            className="p-2 rounded-lg border border-white/10 text-gray-300 hover:text-white transition-colors"
           >
             <Menu className="w-4 h-4" />
           </button>

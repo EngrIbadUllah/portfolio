@@ -16,7 +16,7 @@ const Header = memo(() => (
       </h2>
     </div>
     <p 
-      className="mt-2 text-gray-400 max-w-2xl mx-auto text-base sm:text-lg flex items-center justify-center gap-2"
+      className="mt-2 text-gray-300 max-w-2xl mx-auto text-base sm:text-lg flex items-center justify-center gap-2"
       data-aos="zoom-in-up"
       data-aos-duration="800"
     >
@@ -98,7 +98,7 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
         </p>
         <div className="flex items-center justify-between">
           <p 
-            className="text-xs text-gray-400"
+            className="text-xs text-gray-300"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-anchor-placement="top-bottom"
@@ -214,12 +214,11 @@ const AboutPage = () => {
             </h2>
             
             <p 
-              className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify pb-4 sm:pb-0"
+              className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed text-justify pb-4 sm:pb-0"
               data-aos="fade-right"
               data-aos-duration="1500"
-            >
-        I'm Ibad Ullah, a Software Engineering student with a strong passion for frontend web development. I specialize in building clean, responsive, and user-friendly web interfaces using HTML, CSS, C++, and Microsoft Office tools. Committed to continuous learning, I approach every project with dedication and a problem-solving mindset turning ideas into functional digital experiences, one step at a time.
-                  </p>
+            >I am a Software Engineering student at Air University, Islamabad. I specialize in building responsive and user friendly web applications using modern technologies.
+Currently focused on improving my frontend development skills and working on real world projects.</p>
 
                {/* Quote Section */}
       <div 
@@ -312,17 +311,17 @@ const AboutPage = () => {
               <h3 className="text-xl font-bold text-white mb-1">BS Software Engineering</h3>
               <p className="text-indigo-400 font-medium mb-3">Air University, Islamabad</p>
               <div className="flex flex-wrap gap-3 mb-4">
-                <span className="flex items-center gap-1 text-sm text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/10">
+                <span className="flex items-center gap-1 text-sm text-gray-300 bg-white/5 px-3 py-1 rounded-full border border-white/10">
                    2025 – Present
                 </span>
-                <span className="flex items-center gap-1 text-sm text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/10">
+                <span className="flex items-center gap-1 text-sm text-gray-300 bg-white/5 px-3 py-1 rounded-full border border-white/10">
                   🎓 2nd Semester
                 </span>
-                <span className="flex items-center gap-1 text-sm text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/10">
+                <span className="flex items-center gap-1 text-sm text-gray-300 bg-white/5 px-3 py-1 rounded-full border border-white/10">
                   📍 Islamabad, Pakistan
                 </span>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 Currently pursuing a Bachelor of Science in Software Engineering at Air University, Islamabad. Building a strong foundation in programming, data structures, algorithms, and modern software development practices.
               </p>
             </div>
@@ -345,11 +344,11 @@ const AboutPage = () => {
                   <p className="text-indigo-400 font-medium text-sm mt-1">Self-Study & Personal Projects</p>
                 </div>
                 <div className="flex gap-2 flex-wrap">
-                  <span className="text-xs text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full"> 2025 – Present</span>
-                  <span className="text-xs text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full"> Self-Directed</span>
+                  <span className="text-xs text-gray-300 bg-white/5 border border-white/10 px-3 py-1 rounded-full"> 2025 – Present</span>
+                  <span className="text-xs text-gray-300 bg-white/5 border border-white/10 px-3 py-1 rounded-full"> Self-Directed</span>
                 </div>
               </div>
-              <ul className="mt-3 space-y-2 text-sm text-gray-400">
+              <ul className="mt-3 space-y-2 text-sm text-gray-300">
                 <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Building personal web projects using HTML, CSS, and C++</li>
                 <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Studying modern web development technologies and best practices</li>
                 <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Developing problem-solving skills through consistent coding practice</li>

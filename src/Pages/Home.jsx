@@ -55,7 +55,7 @@ const SocialLink = memo(({ icon: Icon, link, label }) => (
       aria-label={label}>
       <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
       <div className="relative rounded-xl bg-black/50 backdrop-blur-xl p-2 flex items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300">
-        <Icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+        <Icon className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors" />
       </div>
     </button>
   </a>
@@ -64,7 +64,7 @@ const SocialLink = memo(({ icon: Icon, link, label }) => (
 const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
-const WORDS = ["Software Engineering Student", "Frontend Developer (Learning)", "Tech Enthusiast"];
+const WORDS = ["Software Engineering Student", "Software Engineering Student | Frontend Developer", "Tech Enthusiast"];
 const TECH_STACK = ["HTML", "CSS", "C++ (OOP basic)", "MS Word", "MS Excel"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/EngrIbadUllah", label: "GitHub Profile" },
@@ -173,7 +173,7 @@ const Home = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
+                  <p className="text-base md:text-lg text-gray-300 max-w-xl leading-relaxed font-light"
                     data-aos="fade-up"
                     data-aos-delay="1000">
                     Crafting clean, responsive web experiences --- one line of code at a time.
@@ -208,7 +208,7 @@ const Home = () => {
                 data-aos="fade-left"
                 data-aos-delay="600">
                 <div className="relative w-full opacity-90">
-                  <div className={`absolute inset-0 bg-gradient-to-r from-[#6366f1]/10 to-[#a855f7]/10 rounded-3xl blur-3xl transition-all duration-700 ease-in-out ${
+                  <div className={`absolute inset-0 bg-gradient-to-r from-[#6366f1]/10 to-[#a855f7]/10 rounded-3xl blur-xl transition-all duration-700 ease-in-out ${
                     isHovering ? "opacity-50 scale-105" : "opacity-20 scale-100"
                   }`}>
                   </div>
@@ -230,7 +230,7 @@ const Home = () => {
                   <div className={`absolute inset-0 pointer-events-none transition-all duration-700 ${
                     isHovering ? "opacity-50" : "opacity-20"
                   }`}>
-                    <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-br from-indigo-500/10 to-purple-500/10 blur-3xl animate-[pulse_6s_cubic-bezier(0.4,0,0.6,1)_infinite] transition-all duration-700 ${
+                    <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-br from-indigo-500/10 to-purple-500/10 blur-xl animate-[pulse_6s_cubic-bezier(0.4,0,0.6,1)_infinite] transition-all duration-700 ${
                       isHovering ? "scale-110" : "scale-100"
                     }`}>
                     </div>

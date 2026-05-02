@@ -42,13 +42,13 @@ export default function Login() {
                 <span className="text-indigo-300 text-xs font-medium">Admin Portal</span>
               </div>
               <h1 className="text-3xl font-bold text-white">Welcome Back</h1>
-              <p className="text-gray-400 text-sm">Sign in to manage your Portfolio</p>
+              <p className="text-gray-300 text-sm">Sign in to manage your Portfolio</p>
             </div>
 
             {/* Form */}
             <form onSubmit={handleLogin} className="space-y-4">
               <div className="space-y-1.5">
-                <label className="text-xs text-gray-400 uppercase tracking-wider">Email</label>
+                <label className="text-xs text-gray-300 uppercase tracking-wider">Email</label>
                 <div className="flex items-center bg-white/8 border border-white/15 rounded-xl overflow-hidden focus-within:border-indigo-500/60 transition-colors">
                   <Mail className="w-4 h-4 text-gray-500 ml-4 shrink-0" />
                   <input
@@ -63,7 +63,7 @@ export default function Login() {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs text-gray-400 uppercase tracking-wider">Password</label>
+                <label className="text-xs text-gray-300 uppercase tracking-wider">Password</label>
                 <div className="flex items-center bg-white/8 border border-white/15 rounded-xl overflow-hidden focus-within:border-indigo-500/60 transition-colors">
                   <Lock className="w-4 h-4 text-gray-500 ml-4 shrink-0" />
                   <input

@@ -304,7 +304,7 @@ export default function Comments() {
             <button
               onClick={() => setPage((p) => Math.max(1, p - 1))}
               disabled={page === 1}
-              className="p-1.5 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-white/20 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+              className="p-1.5 rounded-lg border border-white/10 text-gray-300 hover:text-white hover:border-white/20 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -334,7 +334,7 @@ export default function Comments() {
                     className={`min-w-[32px] h-8 px-2 rounded-lg text-xs border transition-all duration-200 ${
                       page === p
                         ? "bg-indigo-500/20 border-indigo-500/40 text-indigo-300 font-medium"
-                        : "border-white/10 text-gray-400 hover:text-white hover:border-white/20"
+                        : "border-white/10 text-gray-300 hover:text-white hover:border-white/20"
                     }`}
                   >
                     {p}
@@ -345,7 +345,7 @@ export default function Comments() {
             <button
               onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
               disabled={page === totalPages}
-              className="p-1.5 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-white/20 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+              className="p-1.5 rounded-lg border border-white/10 text-gray-300 hover:text-white hover:border-white/20 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
             >
               <ChevronRight className="w-4 h-4" />
             </button>
