@@ -128,17 +128,15 @@ export default function FullWidthTabs() {
       .select("*");
 
     if (error) {
-      console.log("ERROR:", error);
+      console.log(error);
       return;
     }
 
-    console.log("PROJECTS:", data);
-    setProjects(data || []);
+    setProjects(data);
   };
 
   fetchProjects();
 }, []);
-
 
       // Error handling for each request
       if (projectsResponse.error) throw projectsResponse.error;
@@ -151,17 +149,8 @@ console.log("Projects:", projectData);
       setProjects(projectData);
       setCertificates(certificateData);
 
-      // Store in localStorage (fungsionalitas ini tetap dipertahankan)
-      localStorage.setItem("projects", JSON.stringify(projectData));
-      localStorage.setItem("certificates", JSON.stringify(certificateData));
-    } catch (error) {
-      console.error("Error fetching data from Supabase:", error.message);
-    }
+  
   }, []);
-
-
-
-
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
