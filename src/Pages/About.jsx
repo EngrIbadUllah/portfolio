@@ -218,7 +218,7 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-        Software Engineering student with a strong passion for frontend web development. I specialize in building clean, responsive, and user friendly web interfaces using HTML, CSS, C++. Committed to continuous learning, I approach every project with dedication and a problem-solving mindset turning ideas into functional digital experiences, one step at a time.
+        I'm Ibad Ullah, a Software Engineering student with a strong passion for frontend web development. I specialize in building clean, responsive, and user-friendly web interfaces using HTML, CSS, C++, and Microsoft Office tools. Committed to continuous learning, I approach every project with dedication and a problem-solving mindset — turning ideas into functional digital experiences, one step at a time.
                   </p>
 
                {/* Quote Section */}
@@ -294,6 +294,71 @@ const AboutPage = () => {
         .animate-spin-slower {
           animation: spin-slower 8s linear infinite;
         }
+
+      {/* ── Academic Background ── */}
+      <div className="w-full max-w-4xl mx-auto px-4 mt-20" data-aos="fade-up">
+        <h2 className="text-3xl font-bold text-center text-white mb-10">
+          Academic <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">Background</span>
+        </h2>
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-xl hover:border-indigo-500/30 transition-all duration-300">
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-full bg-indigo-500/20 flex items-center justify-center flex-shrink-0">
+              <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+              </svg>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-white mb-1">BS Software Engineering</h3>
+              <p className="text-indigo-400 font-medium mb-3">Air University, Islamabad</p>
+              <div className="flex flex-wrap gap-3 mb-4">
+                <span className="flex items-center gap-1 text-sm text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/10">
+                  📅 2025 – Present
+                </span>
+                <span className="flex items-center gap-1 text-sm text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/10">
+                  🎓 1st Year
+                </span>
+              </div>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Currently pursuing a Bachelor of Science in Software Engineering, building a strong foundation in programming, data structures, algorithms, and modern software development practices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Professional Journey ── */}
+      <div className="w-full max-w-4xl mx-auto px-4 mt-16 mb-10" data-aos="fade-up">
+        <h2 className="text-3xl font-bold text-center text-white mb-10">
+          Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">Journey</span>
+        </h2>
+        <div className="relative border-l-2 border-indigo-500/30 pl-8 space-y-10">
+
+          {/* Entry 1 */}
+          <div className="relative" data-aos="fade-up" data-aos-delay="100">
+            <div className="absolute -left-[2.65rem] top-1 w-4 h-4 rounded-full bg-indigo-500 border-2 border-indigo-300 shadow-lg shadow-indigo-500/50"></div>
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-indigo-500/30 transition-all duration-300">
+              <div className="flex flex-wrap items-start justify-between gap-3 mb-2">
+                <div>
+                  <h3 className="text-lg font-bold text-white">Fresher — Actively Learning</h3>
+                  <p className="text-indigo-400 font-medium text-sm mt-1">Self-Study & Personal Projects</p>
+                </div>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="text-xs text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full">📅 Present</span>
+                  <span className="text-xs text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full">💻 Remote</span>
+                </div>
+              </div>
+              <ul className="mt-3 space-y-2 text-sm text-gray-400">
+                <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Building personal web projects using HTML, CSS, and C++</li>
+                <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Studying modern web development technologies and frameworks</li>
+                <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Developing problem-solving skills through coding practice</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <p className="text-center text-gray-600 text-xs mt-8">More experience coming soon — stay tuned! 🚀</p>
+      </div>
+
       `}</style>
     </div>
   );
