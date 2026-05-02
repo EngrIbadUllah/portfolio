@@ -47,7 +47,7 @@ const socialLinks = [
 const SocialLinks = () => {
   const linkedIn = socialLinks.find((link) => link.isPrimary);
   const otherLinks = socialLinks.filter((link) => !link.isPrimary);
-const [instagram, github, whatsapp] = otherLinks;
+
   useEffect(() => {
     AOS.init({ offset: 10 });
   }, []);
@@ -108,9 +108,9 @@ const [instagram, github, whatsapp] = otherLinks;
         </a>
 
         {/* Second Row - Instagram & GitHub */}
-className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
-{[instagram, github, whatsapp].map((link, index) => (
-                <a
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+  {otherLinks.map((link, index) => (
+                  <a
               key={link.name}
               href={link.url}
               target="_blank"
