@@ -62,13 +62,13 @@ const SocialLinks = () => {
         Connect With Me
       </h3>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-3">
         {/* LinkedIn - Primary Row */}
         <a
           href={linkedIn.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative flex items-center justify-between p-4 rounded-lg 
+          className="group relative flex items-center justify-between p-3 rounded-lg 
                      bg-white/5 border border-white/10 overflow-hidden
                      hover:border-white/20 transition-all duration-500"
           data-aos="fade-up"
@@ -78,7 +78,7 @@ const SocialLinks = () => {
             className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500
                        bg-gradient-to-r ${linkedIn.gradient}`}
           />
-          <div className="relative flex items-center gap-4">
+          <div className="relative flex items-center gap-3">
             <div className="relative flex items-center justify-center">
               <div
                 className="absolute inset-0 opacity-20 rounded-md transition-all duration-500
@@ -108,14 +108,14 @@ const SocialLinks = () => {
         </a>
 
         {/* Second Row - Instagram & GitHub */}
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
   {otherLinks.map((link, index) => (
                   <a
               key={link.name}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-center gap-3 p-4 rounded-xl 
+              className="group relative flex items-center gap-3 p-3 rounded-xl 
                                bg-white/5 border border-white/10 overflow-hidden
                                hover:border-white/20 transition-all duration-500"
               data-aos="fade-up"
