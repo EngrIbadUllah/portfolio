@@ -134,33 +134,26 @@ totalCertificates: certificates.length,
 
   // Optimized AOS initialization
   useEffect(() => {
-  const fetchData = async () => {
-    const { data: projectData } = await supabase.from("projects").select("*");
-    const { data: certificateData } = await supabase.from("certificates").select("*");
-
-    setProjects(projectData || []);
-    setCertificates(certificateData || []);
+  const initAOS = () => {
+    AOS.init({ once: false });
   };
 
-  fetchData();
+  initAOS();
+
+  let resizeTimer;
+
+  const handleResize = () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(initAOS, 250);
+  };
+
+  window.addEventListener("resize", handleResize);
+
+  return () => {
+    window.removeEventListener("resize", handleResize);
+    clearTimeout(resizeTimer);
+  };
 }, []);
-
-    initAOS();
-    
-    // Debounced resize handler
-    let resizeTimer;
-    const handleResize = () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(initAOS, 250);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      clearTimeout(resizeTimer);
-    };
-  }, []);
-
   // Memoized stats data
   const statsData = useMemo(() => [
     {
