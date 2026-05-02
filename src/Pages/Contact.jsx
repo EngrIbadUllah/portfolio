@@ -130,11 +130,11 @@ const ContactPage = () => {
             <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-indigo-500/30 transition-all duration-300">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-9 h-9 rounded-lg bg-green-500/20 flex items-center justify-center">
-                  <Clock className="w-4 h-4 text-green-400" />
+                  <span className="text-2xl">🎓</span>
                 </div>
-                <span className="text-gray-400 text-sm font-medium">Response Time</span>
+                <span className="text-gray-400 text-sm font-medium">Education</span>
               </div>
-              <p className="text-white text-sm font-semibold">Within 24 hours</p>
+              <p className="text-white text-sm font-semibold">2nd Semester</p>
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-indigo-500/30 transition-all duration-300">

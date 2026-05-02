@@ -313,7 +313,7 @@ const AboutPage = () => {
               <p className="text-indigo-400 font-medium mb-3">Air University, Islamabad</p>
               <div className="flex flex-wrap gap-3 mb-4">
                 <span className="flex items-center gap-1 text-sm text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/10">
-                  📅 2025 – Present
+                   2025 – Present
                 </span>
                 <span className="flex items-center gap-1 text-sm text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/10">
                   🎓 2nd Semester
@@ -345,8 +345,8 @@ const AboutPage = () => {
                   <p className="text-indigo-400 font-medium text-sm mt-1">Self-Study & Personal Projects</p>
                 </div>
                 <div className="flex gap-2 flex-wrap">
-                  <span className="text-xs text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full">📅 2025 – Present</span>
-                  <span className="text-xs text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full">💻 Self-Directed</span>
+                  <span className="text-xs text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full"> 2025 – Present</span>
+                  <span className="text-xs text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full"> Self-Directed</span>
                 </div>
               </div>
               <ul className="mt-3 space-y-2 text-sm text-gray-400">
