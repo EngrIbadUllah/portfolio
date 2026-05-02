@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
 
-import { supabase } from "../supabase"; 
-
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
 import { useTheme } from "@mui/material/styles";
@@ -123,42 +121,24 @@ export default function FullWidthTabs() {
   const isMobile = window.innerWidth < 768;
   const initialItems = isMobile ? 4 : 6;
 
-  useEffect(() => {
+ useEffect(() => {
   const fetchProjects = async () => {
     const { data, error } = await supabase
       .from("projects")
       .select("*");
 
     if (error) {
-      console.log(error);
+      console.log("ERROR:", error);
       return;
     }
 
-    setProjects(data);
+    console.log("PROJECTS:", data);
+    setProjects(data || []);
   };
 
   fetchProjects();
 }, []);
-  useEffect(() => {
-    AOS.init({
-      once: false,
-    });
-  }, []);
 
-
-  const fetchData = useCallback(async () => {
-    if (!supabase) {
-      const stored = localStorage.getItem("projects");
-      const storedCerts = localStorage.getItem("certificates");
-      if (stored) setProjects(JSON.parse(stored));
-      if (storedCerts) setCertificates(JSON.parse(storedCerts));
-      return;
-    }
-    try {
-      const [projectsResponse, certificatesResponse] = await Promise.all([
-        supabase.from("projects").select("*").order('id', { ascending: false }),
-        supabase.from("certificates").select("*").order('id', { ascending: false }),
-      ]);
 
       // Error handling for each request
       if (projectsResponse.error) throw projectsResponse.error;
@@ -181,18 +161,7 @@ console.log("Projects:", projectData);
 
 
 
-  useEffect(() => {
-    // Try loading from localStorage first for faster load
-    const cachedProjects = localStorage.getItem('projects');
-    const cachedCertificates = localStorage.getItem('certificates');
 
-    if (cachedProjects && cachedCertificates) {
-        setProjects(JSON.parse(cachedProjects));
-        setCertificates(JSON.parse(cachedCertificates));
-    }
-    
-    fetchData(); // Still call fetchData to sync with latest data
-  }, [fetchData]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
