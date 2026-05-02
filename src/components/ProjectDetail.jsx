@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { supabase } from "../supabase";
 import { useParams, useNavigate } from "react-router-dom";
 import {
   ArrowLeft,
@@ -124,30 +125,40 @@ const ProjectDetails = () => {
   const [project, setProject] = useState(null);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
-    // Find project by slug generated from Title
-    const selectedProject = storedProjects.find(
-      (p) => toSlug(p.Title) === slug,
+  
+useEffect(() => {
+  window.scrollTo(0, 0);
+
+  const fetchProject = async () => {
+    const { data, error } = await supabase
+      .from("projects")
+      .select("*");
+
+    if (error) {
+      console.log(error);
+      return;
+    }
+
+    const found = data.find(
+      (p) => toSlug(p.Title || p.title) === slug
     );
 
-    if (selectedProject) {
-      const enhancedProject = {
-        ...selectedProject,
-        Features: selectedProject.Features || [
-  "Responsive design",
-  "Modern UI with Tailwind",
-  "Fast performance",
-  "Dynamic data with Supabase"
-],
-        TechStack: selectedProject.TechStack || ["React", "Tailwind", "Supabase"],
-        Github: selectedProject.Github || "https://github.com/EngrIbadUllah/portfolio",
-      };
-      setProject(enhancedProject);
+    if (found) {
+      setProject({
+        ...found,
+        Features: found.Features || [
+          "Responsive design",
+          "Modern UI",
+          "Fast performance"
+        ],
+        TechStack: found.TechStack || ["React", "Tailwind"],
+        Github: found.Github || "https://github.com/EngrIbadUllah"
+      });
     }
-  }, [slug]);
+  };
 
+  fetchProject();
+}, [slug]);
   if (!project) {
     return (
       <div className="min-h-screen bg-[#030014] flex items-center justify-center">
