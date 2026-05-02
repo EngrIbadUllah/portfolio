@@ -295,7 +295,6 @@ const AboutPage = () => {
           animation: spin-slower 8s linear infinite;
         }
 
-
       {/* ── Academic Background ── */}
       <div id="Education" className="w-full max-w-4xl mx-auto px-4 mt-20" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-center text-white mb-10">
@@ -360,10 +359,6 @@ const AboutPage = () => {
         </div>
         <p className="text-center text-gray-500 text-xs mt-8">More experience coming soon — stay tuned! 🚀</p>
       </div>
-
-
-  );
-};
 
       `}</style>
     </div>
