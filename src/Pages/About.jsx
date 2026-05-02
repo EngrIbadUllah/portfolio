@@ -4,8 +4,6 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { supabase } from "../supabase";
 
-const [projects, setProjects] = useState([]);
-const [certificates, setCertificates] = useState([]);
 
 // Memoized Components
 const Header = memo(() => (
@@ -117,6 +115,20 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
 ));
 
 const AboutPage = () => {
+  const [projects, setProjects] = useState([]);
+  const [certificates, setCertificates] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data: projectData } = await supabase.from("projects").select("*");
+      const { data: certificateData } = await supabase.from("certificates").select("*");
+
+      setProjects(projectData || []);
+      setCertificates(certificateData || []);
+    };
+
+    fetchData();
+  }, []);
   // Memoized calculations
   const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
     
