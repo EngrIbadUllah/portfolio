@@ -5,7 +5,6 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { supabase } from "../supabase";
 const StatusBadge = memo(() => null);
-const [projects, setProjects] = useState([]);
 const MainTitle = memo(() => (
   <div className="space-y-2" data-aos="fade-up" data-aos-delay="600">
     <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
@@ -73,6 +72,7 @@ const SOCIAL_LINKS = [
 ];
 
 const Home = () => {
+  const [projects, setProjects] = useState([]);  
   const [text, setText] = useState("")
   const [isTyping, setIsTyping] = useState(true)
   const [wordIndex, setWordIndex] = useState(0)
