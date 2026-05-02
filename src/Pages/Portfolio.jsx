@@ -150,7 +150,7 @@ export default function FullWidthTabs() {
       // Supabase mengembalikan data dalam properti 'data'
       const projectData = projectsResponse.data || [];
       const certificateData = certificatesResponse.data || [];
-
+console.log("Projects:", projectData);
       setProjects(projectData);
       setCertificates(certificateData);
 
@@ -316,12 +316,12 @@ export default function FullWidthTabs() {
                     data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
                   >
                     <CardProject
-                      Img={project.Img}
-                      Title={project.Title}
-                      Description={project.Description}
-                      Link={project.Link}
-                      id={project.id}
-                    />
+  Img={project.Img || project.img}
+  Title={project.Title || project.title}
+  Description={project.Description || project.description}
+  Link={project.Link || project.link}
+  id={project.id}
+/>
                   </div>
                 ))}
               </div>

@@ -59,8 +59,8 @@ const FeatureItem = ({ feature }) => {
 };
 
 const ProjectStats = ({ project }) => {
-  const techStackCount = project?.TechStack?.length || 0;
-  const featuresCount = project?.Features?.length || 0;
+  const techStackCount = project?.TechStack?.length || 3;
+  const featuresCount = project?.Features?.length || 5;
 
   return (
     <div className="grid grid-cols-2 gap-3 md:gap-4 p-3 md:p-4 bg-[#0a0a1a] rounded-xl overflow-hidden relative">
@@ -77,7 +77,7 @@ const ProjectStats = ({ project }) => {
             {techStackCount}
           </div>
           <div className="text-[10px] md:text-xs text-gray-300">
-            Total Teknologi
+            Total Technologies
           </div>
         </div>
       </div>
@@ -94,7 +94,7 @@ const ProjectStats = ({ project }) => {
             {featuresCount}
           </div>
           <div className="text-[10px] md:text-xs text-gray-300">
-            Fitur Utama
+            Main Features
           </div>
         </div>
       </div>
@@ -135,9 +135,14 @@ const ProjectDetails = () => {
     if (selectedProject) {
       const enhancedProject = {
         ...selectedProject,
-        Features: selectedProject.Features || [],
-        TechStack: selectedProject.TechStack || [],
-        Github: selectedProject.Github || "https://github.com/EngrIbadUllah",
+        Features: selectedProject.Features || [
+  "Responsive design",
+  "Modern UI with Tailwind",
+  "Fast performance",
+  "Dynamic data with Supabase"
+],
+        TechStack: selectedProject.TechStack || ["React", "Tailwind", "Supabase"],
+        Github: selectedProject.Github || "https://github.com/EngrIbadUllah/portfolio",
       };
       setProject(enhancedProject);
     }
@@ -246,7 +251,7 @@ const ProjectDetails = () => {
 
                 <ProjectStats project={project} />
 
-                <div className="flex flex-wrap gap-3 md:gap-4">
+                <div className="flex flex-wrap gap-4 mt-6">
                   <a
                     href={project.Link}
                     target="_blank"
@@ -293,14 +298,18 @@ const ProjectDetails = () => {
               </div>
 
               <div className="space-y-6 md:space-y-10 animate-slideInRight">
-                <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
+                <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group hover:shadow-purple-500/20 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <img
-                    src={project.Img}
-                    alt={project.Title}
-                    className="w-full object-cover transform transition-transform duration-700 will-change-transform group-hover:scale-105"
-                    onLoad={() => setIsImageLoaded(true)}
-                  />
+                 <img
+  src={project.Img}
+  alt={project.Title}
+  onLoad={() => setIsImageLoaded(true)}
+  onError={(e) => {
+    e.target.src = "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200";
+  }}
+  className="w-full h-[350px] md:h-[420px] object-cover rounded-2xl transform transition-transform duration-700 group-hover:scale-105"
+/>
+
                   <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/10 transition-colors duration-300 rounded-2xl" />
                 </div>
 
