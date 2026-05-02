@@ -33,7 +33,7 @@ export default function Comments() {
   const fetchComments = async () => {
     setLoading(true);
     const { data } = await supabase
-      .from("portfolio_comments")
+      .from("Portfolio_comments")
       .select("*")
       .order("is_pinned", { ascending: false })
       .order("created_at", { ascending: false });
@@ -52,7 +52,7 @@ export default function Comments() {
 
   const pin = async (id, value) => {
     await supabase
-      .from("portfolio_comments")
+      .from("Portfolio_comments")
       .update({ is_pinned: value })
       .eq("id", id);
     fetchComments();
@@ -60,7 +60,7 @@ export default function Comments() {
 
   const remove = async (id) => {
     if (!confirm("Delete this comment?")) return;
-    await supabase.from("portfolio_comments").delete().eq("id", id);
+    await supabase.from("Portfolio_comments").delete().eq("id", id);
     fetchComments();
   };
 

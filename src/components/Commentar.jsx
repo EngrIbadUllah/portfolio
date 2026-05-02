@@ -257,7 +257,7 @@ const Komentar = () => {
         const fetchPinnedComment = async () => {
             try {
                 const { data, error } = await supabase
-                    .from('portfolio_comments')
+                    .from('Portfolio_comments')
                     .select('*')
                     .eq('is_pinned', true)
                     .single();
@@ -283,7 +283,7 @@ const Komentar = () => {
         if (!supabase) return;
         const fetchComments = async () => {
             const { data, error } = await supabase
-                .from('portfolio_comments')
+                .from('Portfolio_comments')
                 .select('*')
                 .eq('is_pinned', false)
                 .order('created_at', { ascending: false });
@@ -300,12 +300,12 @@ const Komentar = () => {
 
         // Set up real-time subscription
         const subscription = supabase
-            .channel('portfolio_comments')
+            .channel('Portfolio_comments')
             .on('postgres_changes', 
                 { 
                     event: '*', 
                     schema: 'public', 
-                    table: 'portfolio_comments',
+                    table: 'Portfolio_comments',
                     filter: 'is_pinned=eq.false'
                 }, 
                 () => {
@@ -349,7 +349,7 @@ const Komentar = () => {
             const profileImageUrl = await uploadImage(imageFile);
             
             const { error } = await supabase
-                .from('portfolio_comments')
+                .from('Portfolio_comments')
                 .insert([
                     {
                         content: newComment,
