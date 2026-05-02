@@ -294,8 +294,7 @@ const AboutPage = () => {
         .animate-spin-slower {
           animation: spin-slower 8s linear infinite;
         }
-      `}</style>
-    </div>
+
 
       {/* ── Academic Background ── */}
       <div id="Education" className="w-full max-w-4xl mx-auto px-4 mt-20" data-aos="fade-up">
@@ -363,6 +362,11 @@ const AboutPage = () => {
       </div>
 
 
+  );
+};
+
+      `}</style>
+    </div>
   );
 };
 

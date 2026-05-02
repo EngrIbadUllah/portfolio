@@ -107,6 +107,9 @@ const techStacks = [
   { icon: "html.svg", language: "HTML" },
   { icon: "css.svg", language: "CSS" },
   { icon: "c++.png", language: "C++" },
+  { icon: "https://img.icons8.com/color/96/microsoft-word-2019--v1.png", language: "MS Word" },
+  { icon: "https://img.icons8.com/color/96/microsoft-excel-2019--v1.png", language: "MS Excel" },
+  { icon: "https://img.icons8.com/color/96/microsoft-powerpoint-2019--v1.png", language: "MS PowerPoint" },
 ];
 
 export default function FullWidthTabs() {
