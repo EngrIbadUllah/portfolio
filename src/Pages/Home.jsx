@@ -80,8 +80,6 @@ const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isHovering, setIsHovering] = useState(false)
 
-  const [projects, setProjects] = useState([]);
-
   useEffect(() => {
     const fetchProjects = async () => {
       const { data } = await supabase.from("projects").select("*");
