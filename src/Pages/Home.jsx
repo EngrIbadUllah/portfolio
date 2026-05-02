@@ -3,9 +3,9 @@ import { Helmet } from "react-helmet-async"
 import { Github, Linkedin, Mail, ExternalLink, Instagram } from "lucide-react"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-
+import { supabase } from "../supabase";
 const StatusBadge = memo(() => null);
-
+const [projects, setProjects] = useState([]);
 const MainTitle = memo(() => (
   <div className="space-y-2" data-aos="fade-up" data-aos-delay="600">
     <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
@@ -80,13 +80,16 @@ const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isHovering, setIsHovering] = useState(false)
 
+  const [projects, setProjects] = useState([]);
+
   useEffect(() => {
-    const initAOS = () => {
-      AOS.init({
-        once: true,
-        offset: 10,
-      });
+    const fetchProjects = async () => {
+      const { data } = await supabase.from("projects").select("*");
+      setProjects(data || []);
     };
+
+    fetchProjects();
+  }, []);
 
     initAOS();
     window.addEventListener('resize', initAOS);
