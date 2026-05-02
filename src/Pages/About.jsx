@@ -277,7 +277,7 @@ const AboutPage = () => {
         </a>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-20px); }
@@ -294,8 +294,9 @@ const AboutPage = () => {
         .animate-spin-slower {
           animation: spin-slower 8s linear infinite;
         }
+      `}</style>
 
-      {/* ── Academic Background ── */}
+      {/* Academic Background */}
       <div id="Education" className="w-full max-w-4xl mx-auto px-4 mt-20" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-center text-white mb-10">
           Academic <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">Background</span>
@@ -329,7 +330,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* ── Professional Journey ── */}
+      {/* Professional Journey */}
       <div className="w-full max-w-4xl mx-auto px-4 mt-16 mb-16" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-center text-white mb-10">
           Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">Journey</span>
@@ -360,7 +361,6 @@ const AboutPage = () => {
         <p className="text-center text-gray-500 text-xs mt-8">More experience coming soon — stay tuned! 🚀</p>
       </div>
 
-      `}</style>
     </div>
   );
 };
