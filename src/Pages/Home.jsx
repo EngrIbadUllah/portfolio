@@ -65,7 +65,7 @@ const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
 const WORDS = ["Software Engineering Student", "Frontend Developer (Learning)", "Tech Enthusiast"];
-const TECH_STACK = ["HTML", "CSS", "C++", "MS Word", "MS Excel"];
+const TECH_STACK = ["HTML", "CSS", "C++ (OOP basic)", "MS Word", "MS Excel"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/EngrIbadUllah", label: "GitHub Profile" },
   { icon: Linkedin, link: "https://www.linkedin.com/in/ibad-ullah-b28a413a7/", label: "LinkedIn Profile" },
@@ -176,7 +176,7 @@ const Home = () => {
                   <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                     data-aos="fade-up"
                     data-aos-delay="1000">
-                    Crafting clean, responsive web experiences — one line of code at a time.
+                    Crafting clean, responsive web experiences --- one line of code at a time.
                   </p>
 
                   {/* Tech Stack */}
