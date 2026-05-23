@@ -5,13 +5,15 @@ import "./index.css";
 import Navbar from "./components/Navbar";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
-import AnimatedBackground from "./components/Background";
 import { AnimatePresence } from "framer-motion";
 import Footer from "./components/Footer";
 
 import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
+
+// Lazy load 3D background for performance
+const ParticleBackground = lazy(() => import("./components/3D/ParticleBackground"));
 
 const Portfolio = lazy(() => import("./Pages/Portfolio"));
 const ContactPage = lazy(() => import("./Pages/Contact"));
@@ -62,9 +64,10 @@ function App() {
   return (
     
     <HelmetProvider>
-      <div className="pointer-events-none">
-  <AnimatedBackground />
-</div>
+      {/* 3D Particle Background */}
+      <Suspense fallback={null}>
+        <ParticleBackground />
+      </Suspense>
       <BrowserRouter>
         <Routes>
           {/* PUBLIC */}
