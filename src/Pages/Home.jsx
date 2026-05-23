@@ -9,21 +9,6 @@ import { motion } from "framer-motion"
 // Lazy load 3D components for performance
 const HeroScene = lazy(() => import("../components/3D/HeroScene"))
 
-const StatusBadge = memo(() => (
-  <motion.div 
-    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 backdrop-blur-sm"
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6, delay: 0.2 }}
-  >
-    <span className="relative flex h-2 w-2">
-      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-      <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-    </span>
-    <span className="text-sm text-cyan-300 font-medium">Available for opportunities</span>
-  </motion.div>
-));
-
 const MainTitle = memo(() => (
   <div className="space-y-2">
     <motion.h1 
@@ -235,7 +220,6 @@ const Home = () => {
               
               {/* Left Column - Content */}
               <div className="w-full lg:w-1/2 space-y-6 text-left order-2 lg:order-1">
-                <StatusBadge />
                 <MainTitle />
 
                 {/* Typing Effect */}

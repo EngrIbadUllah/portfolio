@@ -212,10 +212,10 @@ const AboutPage = () => {
 
     return {
       totalProjects: projects.length,
-      totalCertificates: certificates.length,
+      totalCertificates: 0, // Set to 0 as requested
       YearExperience: experience
     };
-  }, [projects.length, certificates.length]);
+  }, [projects.length]);
 
   const statsData = useMemo(() => [
     {
