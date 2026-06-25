@@ -54,9 +54,9 @@ const ContactPage = () => {
           Contact Me
         </h2>
         <p data-aos="fade-up" data-aos-duration="1100"
-          className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
-          Have a question? Send me a message and I'll get back to you as soon as possible.
-        </p>
+  className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
+  Have a project in mind or want to discuss an internship opportunity? I'd love to hear from you!
+</p>
       </div>
 
       {/* 2-Column Layout */}
@@ -144,7 +144,7 @@ const ContactPage = () => {
                 </div>
                 <span className="text-gray-300 text-sm font-medium">Status</span>
               </div>
-              <p className="text-white text-sm font-semibold">Open to Opportunities</p>
+              <p className="text-white text-sm font-semibold">Seeking Internship 2026</p>
             </div>
           </div>
 
