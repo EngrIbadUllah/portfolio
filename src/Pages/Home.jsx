@@ -64,7 +64,20 @@ const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
 const WORDS = ["Software Engineering Student", "Software Engineering Student | Frontend Developer", "Tech Enthusiast"];
-const TECH_STACK = ["HTML", "CSS", "C++ (OOP basic)", "MS Word", "MS Excel"];
+const TECH_STACK = [
+  "HTML5",
+  "CSS3",
+  "JavaScript (ES6+)",
+  "React.js",
+  "Tailwind CSS",
+  "C++",
+  "Git",
+  "GitHub",
+  "Vite",
+  "Responsive Web Design",
+  "Node.js",
+  "Firebase"
+];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/EngrIbadUllah", label: "GitHub Profile" },
   { icon: Linkedin, link: "https://www.linkedin.com/in/ibad-ullah-b28a413a7/", label: "LinkedIn Profile" },

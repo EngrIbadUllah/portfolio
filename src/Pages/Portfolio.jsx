@@ -103,14 +103,16 @@ function a11yProps(index) {
 
 // techStacks tetap sama
 const techStacks = [
-  { icon: "html.svg", language: "HTML" },
-  { icon: "css.svg", language: "CSS" },
+  { icon: "html.svg", language: "HTML5" },
+  { icon: "css.svg", language: "CSS3" },
+  { icon: "https://img.icons8.com/color/96/javascript--v1.png", language: "JavaScript" },
+  { icon: "https://img.icons8.com/color/96/react-native.png", language: "React.js" },
+  { icon: "https://img.icons8.com/color/96/tailwindcss.png", language: "Tailwind CSS" },
   { icon: "c++.png", language: "C++" },
-  { icon: "https://img.icons8.com/color/96/microsoft-word-2019--v1.png", language: "MS Word" },
-  { icon: "https://img.icons8.com/color/96/microsoft-excel-2019--v1.png", language: "MS Excel" },
-  { icon: "https://img.icons8.com/color/96/microsoft-powerpoint-2019--v1.png", language: "MS PowerPoint" },
+  { icon: "https://img.icons8.com/color/96/git.png", language: "Git" },
+  { icon: "https://img.icons8.com/color/96/github--v1.png", language: "GitHub" },
+  { icon: "https://img.icons8.com/color/96/nodejs.png", language: "Node.js" },
 ];
-
 export default function FullWidthTabs() {
   const theme = useTheme();
   const [value, setValue] = useState(0);
