@@ -134,7 +134,7 @@ const ContactPage = () => {
                 </div>
                 <span className="text-gray-300 text-sm font-medium">Education</span>
               </div>
-              <p className="text-white text-sm font-semibold">2nd Semester</p>
+              <p className="text-white text-sm font-semibold">3rd Semester</p>
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-indigo-500/30 transition-all duration-300">

@@ -327,7 +327,7 @@ Currently focused on improving my frontend development skills and working on rea
                    2025 – Present
                 </span>
                 <span className="flex items-center gap-1 text-sm text-gray-300 bg-white/5 px-3 py-1 rounded-full border border-white/10">
-                  🎓 2nd Semester
+                  🎓 3rd Semester
                 </span>
                 <span className="flex items-center gap-1 text-sm text-gray-300 bg-white/5 px-3 py-1 rounded-full border border-white/10">
                   📍 Islamabad, Pakistan
