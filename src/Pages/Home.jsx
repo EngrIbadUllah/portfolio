@@ -65,7 +65,7 @@ const SocialLink = memo(({ icon: Icon, link, label }) => (
 const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
-const WORDS = ["Software Engineering Student", "Software Engineering Student | Frontend Developer", "Tech Enthusiast"];
+const WORDS = ["Software Engineering Student", "Frontend Developer", "Web3 & Blockchain Enthusiast", "React.js Developer"];
 const TECH_STACK = ["HTML5", "CSS3", "JavaScript", "React.js", "Tailwind CSS", "C++", "Git", "GitHub", "Node.js"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/EngrIbadUllah", label: "GitHub Profile" },
@@ -178,7 +178,7 @@ const Home = () => {
                   <p className="text-base md:text-lg text-gray-300 max-w-xl leading-relaxed font-light"
                     data-aos="fade-up"
                     data-aos-delay="1000">
-                    Crafting clean, responsive web experiences --- one line of code at a time.
+                    Crafting clean, responsive web experiences -> one line of code at a time.
                   </p>
 
                   {/* Tech Stack */}
