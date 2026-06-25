@@ -64,20 +64,7 @@ const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
 const WORDS = ["Software Engineering Student", "Software Engineering Student | Frontend Developer", "Tech Enthusiast"];
-const TECH_STACK = [
-  "HTML5",
-  "CSS3",
-  "JavaScript (ES6+)",
-  "React.js",
-  "Tailwind CSS",
-  "C++",
-  "Git",
-  "GitHub",
-  "Vite",
-  "Responsive Web Design",
-  "Node.js",
-  "Firebase"
-];
+const TECH_STACK = ["HTML5", "CSS3", "JavaScript", "React.js", "Tailwind CSS", "C++", "Git", "GitHub", "Node.js"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/EngrIbadUllah", label: "GitHub Profile" },
   { icon: Linkedin, link: "https://www.linkedin.com/in/ibad-ullah-b28a413a7/", label: "LinkedIn Profile" },
@@ -193,7 +180,7 @@ const Home = () => {
                   </p>
 
                   {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-3 justify-start" data-aos="fade-up" data-aos-delay="1200">
+                  <div className="flex flex-wrap gap-2 justify-start" data-aos="fade-up" data-aos-delay="1200">
                     {TECH_STACK.map((tech, index) => (
                       <TechStack key={index} tech={tech} />
                     ))}
