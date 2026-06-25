@@ -115,8 +115,9 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
 ));
 
 const AboutPage = () => {
-  const [projects, setProjects] = useState([]);
+const [projects, setProjects] = useState([]);
   const [certificates, setCertificates] = useState([]);
+  const [internships, setInternships] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -130,19 +131,20 @@ const AboutPage = () => {
     fetchData();
   }, []);
   // Memoized calculations
-  const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
+ const { totalProjects, totalCertificates, totalInternships, YearExperience } = useMemo(() => {
     
     const startDate = new Date("2025-09-01");
-    const today = new Date();
-    const experience = today.getFullYear() - startDate.getFullYear() -
-      (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
+const today = new Date();
+const months = (today.getFullYear() - startDate.getFullYear()) * 12 + (today.getMonth() - startDate.getMonth());
+const experience = Math.max(months, 0);
 
     return {
       totalProjects: projects.length,
-totalCertificates: certificates.length,
+      totalCertificates: certificates.length,
+      totalInternships: internships.length,
       YearExperience: experience
     };
-  }, []);
+  }, [projects, certificates, internships]);
 
   // Optimized AOS initialization
   useEffect(() => {
@@ -185,14 +187,22 @@ totalCertificates: certificates.length,
       animation: "fade-up",
     },
     {
-      icon: Globe,
+      icon: UserCheck,
       color: "from-[#6366f1] to-[#a855f7]",
-      value: YearExperience,
-      label: "Years of Experience",
-      description: "Continuous learning journey",
-      animation: "fade-left",
+      value: totalInternships,
+      label: "Internships",
+      description: "Actively seeking opportunities",
+      animation: "fade-up",
     },
-  ], [totalProjects, totalCertificates, YearExperience]);
+    {
+  icon: Globe,
+  color: "from-[#a855f7] to-[#6366f1]",
+  value: `${YearExperience}+`,
+  label: "Months of Learning",
+  description: "Continuous learning journey",
+  animation: "fade-left",
+},
+  ], [totalProjects, totalCertificates, totalInternships, YearExperience]);
 
   return (
     <div
@@ -229,8 +239,7 @@ totalCertificates: certificates.length,
               className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed text-justify pb-4 sm:pb-0"
               data-aos="fade-right"
               data-aos-duration="1500"
-            >I am a Software Engineering student at Air University, Islamabad. I specialize in building responsive and user friendly web applications using modern technologies.
-Currently focused on improving my frontend development skills and working on real world projects.</p>
+            >I am a Software Engineering student (3rd Semester) at Air University, Islamabad. I build responsive, modern web applications using React.js, Tailwind CSS, and JavaScript. Passionate about Web3, blockchain and creating real world digital solutions that make an impact.</p>
 
                {/* Quote Section */}
       <div 
@@ -280,7 +289,7 @@ Currently focused on improving my frontend development skills and working on rea
         </div>
 
         <a href="#Portfolio">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 cursor-pointer">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 cursor-pointer">
             {statsData.map((stat) => (
               <StatCard key={stat.label} {...stat} />
             ))}
@@ -333,9 +342,10 @@ Currently focused on improving my frontend development skills and working on rea
                   📍 Islamabad, Pakistan
                 </span>
               </div>
+              
               <p className="text-gray-300 text-sm leading-relaxed">
-                Currently pursuing a Bachelor of Science in Software Engineering at Air University, Islamabad. Building a strong foundation in programming, data structures, algorithms, and modern software development practices.
-              </p>
+  Currently pursuing a Bachelor of Science in Software Engineering at Air University, Islamabad. Completed 2 semesters with coursework in OOP (C++), Computer Networks, Digital Logic Design, Discrete Structures, and Web Development. Actively building real-world projects alongside academics.
+</p>
             </div>
           </div>
         </div>
@@ -348,9 +358,89 @@ Currently focused on improving my frontend development skills and working on rea
 
   <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl hover:border-indigo-500/30 transition-all duration-300">
     <p className="text-gray-300 text-sm leading-relaxed text-center">
-      I am currently learning HTML,CSS,React.js and do practice on building real world projects to strengthen my frontend development skills. 
-      My focus is on creating clean, responsive, and user friendly web applications while improving problem solving abilities.
-    </p>
+  Currently building real world projects with React.js, Tailwind CSS and Vite while exploring Web3 and blockchain development. 
+  Focused on writing clean, responsive code and preparing for my first internship in frontend or full stack development.
+</p>
+  </div>
+</div>
+{/* Skills Section */}
+<div className="w-full max-w-4xl mx-auto px-4 mt-16" data-aos="fade-up">
+  <h2 className="text-3xl font-bold text-center text-white mb-10">
+    My <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">Skills</span>
+  </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+    {/* Frontend */}
+    <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl hover:border-indigo-500/30 transition-all duration-300">
+      <h3 className="text-lg font-bold text-white mb-5 flex items-center gap-2">
+        <span className="w-2 h-2 rounded-full bg-gradient-to-r from-[#6366f1] to-[#a855f7]"></span>
+        Frontend Development
+      </h3>
+      {[
+        { name: "HTML5 & CSS3", level: 85 },
+        { name: "JavaScript", level: 65 },
+        { name: "React.js", level: 60 },
+        { name: "Tailwind CSS", level: 70 },
+        { name: "Responsive Design", level: 75 },
+      ].map((skill) => (
+        <div key={skill.name} className="mb-4">
+          <div className="flex justify-between mb-1">
+            <span className="text-gray-300 text-sm">{skill.name}</span>
+            <span className="text-indigo-400 text-sm font-medium">{skill.level}%</span>
+          </div>
+          <div className="w-full bg-white/10 rounded-full h-2">
+            <div
+              className="h-2 rounded-full bg-gradient-to-r from-[#6366f1] to-[#a855f7] transition-all duration-1000"
+              style={{ width: `${skill.level}%` }}
+            ></div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* Programming & Tools */}
+    <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl hover:border-indigo-500/30 transition-all duration-300">
+      <h3 className="text-lg font-bold text-white mb-5 flex items-center gap-2">
+        <span className="w-2 h-2 rounded-full bg-gradient-to-r from-[#6366f1] to-[#a855f7]"></span>
+        Programming & Tools
+      </h3>
+      {[
+        { name: "C++ (OOP)", level: 80 },
+        { name: "Git & GitHub", level: 85 },
+        { name: "Supabase", level: 70 },
+        { name: "VS Code", level: 90 },
+      ].map((skill) => (
+        <div key={skill.name} className="mb-4">
+          <div className="flex justify-between mb-1">
+            <span className="text-gray-300 text-sm">{skill.name}</span>
+            <span className="text-indigo-400 text-sm font-medium">{skill.level}%</span>
+          </div>
+          <div className="w-full bg-white/10 rounded-full h-2">
+            <div
+              className="h-2 rounded-full bg-gradient-to-r from-[#6366f1] to-[#a855f7] transition-all duration-1000"
+              style={{ width: `${skill.level}%` }}
+            ></div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* Currently Learning */}
+    <div className="md:col-span-2 bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl hover:border-indigo-500/30 transition-all duration-300">
+      <h3 className="text-lg font-bold text-white mb-5 flex items-center gap-2">
+        <span className="w-2 h-2 rounded-full bg-gradient-to-r from-[#6366f1] to-[#a855f7]"></span>
+        Currently Learning
+      </h3>
+      <div className="flex flex-wrap gap-3">
+        {["Node.js", "Firebase", "Web3.js", "Blockchain Basics", "Next.js", "TypeScript"].map((tech) => (
+          <span key={tech} className="px-4 py-2 rounded-full bg-gradient-to-r from-[#6366f1]/10 to-[#a855f7]/10 border border-[#6366f1]/30 text-gray-300 text-sm hover:border-[#a855f7]/60 hover:text-white transition-all duration-300">
+            {tech}
+          </span>
+        ))}
+      </div>
+    </div>
+
   </div>
 </div>
       {/* Professional Journey */}
@@ -375,7 +465,7 @@ Currently focused on improving my frontend development skills and working on rea
               <ul className="mt-3 space-y-2 text-sm text-gray-300">
                 <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Building personal web projects using HTML, CSS, and C++</li>
                 <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Studying modern web development technologies and best practices</li>
-                <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Developing problem-solving skills through consistent coding practice</li>
+                <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Developing problem solving skills through consistent coding practice</li>
                 <li className="flex gap-2"><span className="text-indigo-400 mt-1">▸</span> Actively seeking internship and collaboration opportunities</li>
               </ul>
             </div>
